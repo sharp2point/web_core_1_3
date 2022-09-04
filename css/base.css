@@ -120,6 +120,13 @@
   overflow-y: auto;
   margin-left: 12px;
 }
+
+@supports selector(::-webkit-scrollbar) {
+  .main__h-scroll-menu::-webkit-scrollbar {
+    overflow: hidden;
+  }
+}
+
 .h-scroll-menu__button_text {
   display: inline;
 }
@@ -207,9 +214,9 @@
   .header__menu-small {
     display: flex;
   }
-  .menu-small__button-text{
+  .menu-small__button-text {
     display: inline;
-    color: #1B1C21;
+    color: #1b1c21;
     font-weight: 500;
   }
   .main {
