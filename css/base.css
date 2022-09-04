@@ -1,0 +1,228 @@
+@import url("init.css");
+@import url("../components/common.blocks/button/button.css");
+@import url("../components/common.blocks/v-divider/v-divider.css");
+@import url("../components/common.blocks/logo/logo.css");
+
+/* @import url("debug.css"); */
+
+.page {
+  margin-inline: auto;
+  min-width: 320px;
+  max-width: 1120px;
+  background: #f8f8f8;
+}
+
+/*-------------------- UPPER MENU --------------*/
+.page__upper-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  min-height: 88px;
+  background: #fff;
+  box-shadow: 0 0 4px #d9fff5;
+}
+.header__menu-small {
+  display: none;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.upper-menu__left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  flex-basis: 60px;
+  margin-left: 16px;
+}
+.upper-menu__center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-inline: 16px;
+  flex-basis: 100%;
+}
+.upper-menu__social-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.upper-menu__right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  flex-basis: 100px;
+  margin-right: 16px;
+}
+
+/*------------------ MAIN ---------------------*/
+.main {
+  background: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 24px;
+}
+.main__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+.header__text {
+  font-size: 28px;
+  line-height: 40px;
+  letter-spacing: -0.6px;
+  margin-left: 16px;
+}
+.header__marker {
+  position: absolute;
+  width: 4px;
+  height: 40px;
+  border-radius: 0 8px 8px 0;
+  background: #41f6d7;
+}
+.main__h-scroll-menu-fade-place {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 0px;
+}
+.fade-place__fade {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(
+    270deg,
+    #f8f8f8 16.84%,
+    rgba(248, 248, 248, 0.0001) 100%
+  );
+}
+.main__h-scroll-menu {
+  display: flex;
+  max-width: 1120px;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  overflow-y: auto;
+  margin-left: 12px;
+}
+.h-scroll-menu__button_text {
+  display: inline;
+}
+.main__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 16px;
+}
+.content__article {
+  display: flex;
+  max-height: 90px;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 16px;
+  margin-inline: 16px;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  color: #1b1c21;
+}
+.content__text-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.main__banner {
+  object-fit: cover;
+  height: calc(100vh / 3);
+  width: 100vw;
+  margin-top: -10px;
+}
+
+.upper-menu__button {
+  border: none;
+}
+.content__button {
+  border: none;
+}
+
+/*------------- MEDIA QUERY ------------------*/
+
+@media screen and (max-width: 340px) {
+  .upper-menu__v-divider-left {
+    display: none;
+  }
+}
+@media screen and (max-width: 515px) {
+  .upper-menu__social-menu {
+    display: none;
+  }
+}
+@media screen and (min-width: 760px) {
+  .main {
+    padding-left: 24px;
+    gap: 32px;
+  }
+
+  .header__marker {
+    margin-left: -24px;
+  }
+  .main__content {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 48px;
+  }
+  .main__banner {
+    height: calc(100vh / 2.1);
+    width: calc(100vw / 2.1);
+    border-radius: 0.5rem;
+  }
+  .content__article {
+    min-width: 312px;
+    max-height: 160px;
+  }
+}
+@media screen and (min-width: 1120px) {
+  .page__upper-menu {
+    display: none;
+  }
+  .header__menu-small {
+    display: flex;
+  }
+  .menu-small__button-text{
+    display: inline;
+    color: #1B1C21;
+    font-weight: 500;
+  }
+  .main {
+    padding-left: 32px;
+    gap: 32px;
+  }
+  .header__marker {
+    margin-left: -32px;
+  }
+  .upper-menu__v-divider-left {
+    display: none;
+  }
+  .main__h-scroll-menu {
+    flex-wrap: wrap;
+  }
+}

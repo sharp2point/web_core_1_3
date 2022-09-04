@@ -1,0 +1,22 @@
+@import url("./__image/button__image.css");
+@import url("./__text/button__text.css");
+@import url("./_type/button_type_circle.css");
+@import url("./_type/button_type_border.css");
+@import url("./_type/button_type_border_active.css");
+@import url("./_type/button_type_arrow.css");
+
+.button{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+    min-width: fit-content;
+    font-family: "TT Lakes";
+    transition: 0.5s;
+}
+.button:hover .button__image {
+    transform: rotate(20deg);
+}
+.button:hover{
+    transform: scale(1.05);
+}
