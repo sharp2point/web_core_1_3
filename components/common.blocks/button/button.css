@@ -1,9 +1,9 @@
-@import url("./__image/button__image.css");
-@import url("./__text/button__text.css");
-@import url("./_type/button_type_circle.css");
-@import url("./_type/button_type_border.css");
-@import url("./_type/button_type_border_active.css");
-@import url("./_type/button_type_arrow.css");
+@import url("./image/button__image.css");
+@import url("./text/button__text.css");
+@import url("./type/button_type_circle.css");
+@import url("./type/button_type_border.css");
+@import url("./type/button_type_border_active.css");
+@import url("./type/button_type_arrow.css");
 
 .button{
     display: flex;
