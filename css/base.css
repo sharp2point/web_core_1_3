@@ -124,6 +124,7 @@
 }
 .main__h-scroll-menu {
   display: flex;
+  scrollbar-width: none; /*скрыть скролбар в Geko*/
   max-width: 1120px;
   flex-wrap: nowrap;
   flex-direction: row;
@@ -135,7 +136,7 @@
 }
 
 @supports selector(::-webkit-scrollbar) {
-  .main__h-scroll-menu::-webkit-scrollbar {
+  .main__h-scroll-menu::-webkit-scrollbar { /*скрыть скролбар в WebKit*/
     overflow: hidden;
   }
 }
