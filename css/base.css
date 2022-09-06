@@ -251,17 +251,18 @@
   }
 }
 @media screen and (min-width: 1120px) {
-  .page__upper-menu {
+  .page__upper-menu{
     display: none;
   }
   .header__menu-small {
     display: flex;
+    justify-content: space-between;
   }
-  .menu-small__button-text {
+  /* .menu-small__button-text {
     display: inline;
     color: #1b1c21;
     font-weight: 500;
-  }
+  } */
   .main {
     padding-left: 32px;
     gap: 32px;

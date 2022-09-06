@@ -5,6 +5,7 @@
     line-height: 24px;
     letter-spacing: -0.2px;
     transition: box-shadow 0.5s;
+    
     cursor:pointer;
     border: none;
     
@@ -52,7 +53,19 @@
 }
 .menu-small__button-repair{
     background-image: url('../img/ico/repair.svg');
+    background-repeat: no-repeat;
+}
+.menu-small__button-repair::before{
+    position: relative;
+    content:"Оставить заявку";
+    left: -160px;
 }
 .menu-small__button-checkstatus{
     background-image: url('../img/ico/checkstatus.svg');
+    background-repeat: no-repeat;
+}
+.menu-small__button-checkstatus:before{
+    position: relative;
+    content: "Статус ремонта";
+    left: -160px;
 }
