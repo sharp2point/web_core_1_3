@@ -130,26 +130,7 @@
         </div>
         <img class="main__banner" src="./img/banner.png" alt="CPS banner" />
       </div>
-      <script>
-        let isDebug = false;
-        function appendCSSLink() {
-            const elem = document.createElement("link");
-            elem.rel = "stylesheet";
-            elem.type = "text/css";
-            elem.href = "./css/debug.css";
-            document.body.appendChild(elem);
-            return true;
-          }
-        function removeCSSLink() {
-            document.body.removeChild(document.body.querySelector("link"));
-            return false;
-          }
-        document.addEventListener("keydown", (e) => {             
-          if (e.code === "KeyB" && e.shiftKey) {
-            isDebug = isDebug ? removeCSSLink() : appendCSSLink()
-          }
-        });
-      </script>
+      
     </main>
   </body>
 </html>

@@ -1,7 +1,5 @@
 @import url("init.css");
-@import url("../components/common.blocks/button/button.css");
-@import url("../components/common.blocks/v-divider/v-divider.css");
-@import url("../components/common.blocks/logo/logo.css");
+@import url("button.css");
 
 /* @import url("debug.css"); */
 
@@ -26,6 +24,15 @@
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
+}
+.logo {
+  margin: 0;
+  padding: 0;
+  width: 96.55px;
+  height: 50.81px;
+}
+.logo__image{
+  object-fit: contain;
 }
 .upper-menu__left {
   display: flex;
@@ -59,6 +66,12 @@
   gap: 16px;
   flex-basis: 100px;
   margin-right: 16px;
+}
+.v-divider{
+  width: 2px;
+  height: 32px;
+  border: none;
+  background: #EAEAEA;
 }
 
 /*------------------ MAIN ---------------------*/

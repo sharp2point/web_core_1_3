@@ -1,8 +1,0 @@
-.button_type_arrow{
-    padding: 8px 16px;    
-    flex-direction: row-reverse; 
-    font-weight: 500;
-    color: #1B1C21;
-    background: transparent;
-    transition: 0.5s;
-}
