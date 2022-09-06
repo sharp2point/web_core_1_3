@@ -140,10 +140,6 @@
     overflow: hidden;
   }
 }
-
-.h-scroll-menu__button_text {
-  display: inline;
-}
 .main__content {
   display: flex;
   flex-direction: column;
