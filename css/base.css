@@ -21,9 +21,6 @@
 }
 .header__menu-small {
   display: none;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
 }
 .logo {
   margin: 0;
@@ -31,7 +28,7 @@
   width: 96.55px;
   height: 50.81px;
 }
-.logo__image{
+.logo__image {
   object-fit: contain;
 }
 .upper-menu__left {
@@ -67,11 +64,11 @@
   flex-basis: 100px;
   margin-right: 16px;
 }
-.v-divider{
+.v-divider {
   width: 2px;
   height: 32px;
   border: none;
-  background: #EAEAEA;
+  background: #eaeaea;
 }
 
 /*------------------ MAIN ---------------------*/
@@ -136,7 +133,8 @@
 }
 
 @supports selector(::-webkit-scrollbar) {
-  .main__h-scroll-menu::-webkit-scrollbar { /*скрыть скролбар в WebKit*/
+  .main__h-scroll-menu::-webkit-scrollbar {
+    /*скрыть скролбар в WebKit*/
     overflow: hidden;
   }
 }
@@ -180,22 +178,22 @@
 .content__button {
   border: none;
 }
-.content__arrow{
+.content__arrow {
   display: block;
   margin-left: 24px;
   margin-top: 16px;
-  width:200px;
+  width: 200px;
   font-family: "TT Lakes";
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
   letter-spacing: -0.2px;
-  color: #1B1C21;
+  color: #1b1c21;
 }
-.content__arrow::before{
-  content: '';
-  border-left: 2px solid #41F6D7;
-  border-top: 2px solid #41F6D7;
+.content__arrow::before {
+  content: "";
+  border-left: 2px solid #41f6d7;
+  border-top: 2px solid #41f6d7;
   width: 5px;
   height: 5px;
   transform: rotate(-135deg);
@@ -203,11 +201,11 @@
   margin-right: -16px;
   float: left;
 }
-.content__arrow::after{
-  content: '';
-  border-left: 2px solid #41F6D7;
-  border-top: 2px solid #41F6D7;
-  width: 5px;  
+.content__arrow::after {
+  content: "";
+  border-left: 2px solid #41f6d7;
+  border-top: 2px solid #41f6d7;
+  width: 5px;
   height: 5px;
   transform: rotate(-135deg);
   margin-top: 10px;
@@ -251,18 +249,25 @@
   }
 }
 @media screen and (min-width: 1120px) {
-  .page__upper-menu{
+  .page__upper-menu {
     display: none;
   }
+
   .header__menu-small {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    gap: 32px;
   }
-  /* .menu-small__button-text {
-    display: inline;
-    color: #1b1c21;
-    font-weight: 500;
-  } */
+  .menu-small__button-define{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+  }
+  
   .main {
     padding-left: 32px;
     gap: 32px;
