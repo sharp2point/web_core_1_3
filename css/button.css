@@ -1,0 +1,65 @@
+.button {
+  min-width: fit-content;
+  font-family: "TT Lakes";
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  transition: box-shadow 0.5s;
+
+  cursor: pointer;
+  border: none;
+}
+.button:hover {
+  box-shadow: inset 0px 0px 3px 2px #6d8497;
+}
+.button_type_circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ff3e79;
+}
+.button_type_border {
+  width: 40px;
+  height: 40px;
+  padding: 8px 16px;
+  background: #f8f8f8;
+  color: #7e7e82;
+}
+.button_type_border_active {
+  padding: 8px 16px;
+  background: #fff;
+  color: #7e7e82;
+  border: 2px solid #b8ffec;
+  border-radius: 6px;
+}
+.button__text {
+  color: #1b1c21;
+  font-weight: 500;
+}
+/* ------------- SET ICON ---------------------- */
+.upper-menu__button-burger {
+  background-image: url("../img/ico/burger.svg");
+}
+.upper-menu__button-call {
+  background-image: url("../img/ico/call.svg");
+}
+.upper-menu__button-chat {
+  background-image: url("../img/ico/chat.svg");
+}
+.upper-menu__button-profile {
+  background-image: url("../img/ico/profile.svg");
+}
+.upper-menu__button-repair {
+  background-image: url("../img/ico/repair.svg");
+}
+.upper-menu__button-checkstatus {
+  background-image: url("../img/ico/checkstatus.svg");
+}
+.menu-small__button-repair {
+  background-image: url("../img/ico/repair.svg");
+  background-repeat: no-repeat;
+}
+.menu-small__button-checkstatus {
+  background-image: url("../img/ico/checkstatus.svg");
+  background-repeat: no-repeat;
+}

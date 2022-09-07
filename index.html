@@ -1,53 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Permissions-Policy" content="interest-cohort=()"/>
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
     <link rel="stylesheet" href="./css/base.css" />
     <title>CPS - service</title>
   </head>
   <body class="page">
     <div class="page__upper-menu upper-menu">
-      <nav class="upper-menu__left">
-        <button class="upper-menu__button button button_type_circle">
-          <span class="button__text"></span>
-          <img class="button__image" src="./img/ico/burger.svg" />
-        </button>
+      <div class="upper-menu__left">
+        <button
+          class="upper-menu__button-burger button button_type_circle"
+        ></button>
         <div class="upper-menu__v-divider-left v-divider"></div>
-      </nav>
+      </div>
 
       <div class="upper-menu__center">
         <div class="upper-menu__logo logo">
           <img class="logo__image" src="./img/CPS_logo.svg" alt="logo CPS" />
         </div>
-        <nav class="upper-menu__social-menu">
-          <button class="upper-menu__button button button_type_circle">
-            <span class="button__text"></span>
-            <img class="button__image" src="./img/ico/call.svg" />
-          </button>
-          <button class="upper-menu__button button button_type_circle">
-            <span class="button__text"></span>
-            <img class="button__image" src="./img/ico/chat.svg" />
-          </button>
-          <button class="upper-menu__button button button_type_circle">
-            <span class="button__text"></span>
-            <img class="button__image" src="./img/ico/profile.svg" />
-          </button>
-        </nav>
+        <div class="upper-menu__social-menu">
+          <button
+            class="upper-menu__button-call button button_type_circle"
+          ></button>
+          <button
+            class="upper-menu__button-chat button button_type_circle"
+          ></button>
+          <button
+            class="upper-menu__button-profile button button_type_circle"
+          ></button>
+        </div>
       </div>
 
       <nav class="upper-menu__right">
         <div class="upper-menu__v-divider-right v-divider"></div>
-        <button class="upper-menu__button button button_type_circle">
-          <span class="button__text">Оставить заявку</span>
-          <img class="button__image" src="./img/ico/repair.svg" />
-        </button>
-        <button class="upper-menu__button button button_type_circle">
-          <span class="button__text">Статус ремонта</span>
-          <img class="button__image" src="./img/ico/checkstatus.svg" />
-        </button>
+        <button
+          class="upper-menu__button-repair button button_type_circle"
+        ></button>
+        <button
+          class="upper-menu__button-checkstatus button button_type_circle"
+        ></button>
       </nav>
     </div>
 
@@ -55,55 +49,47 @@
       <header class="main__header header">
         <div class="header__marker"></div>
         <h1 class="header__text">Услуги и сервисы</h1>
-        <nav class="header__menu-small menu-small">
-          <button class="menu-small__button button button_type_border">
-            <span class="menu-small__button-text button__text"
-              >Оставить заявку</span
-            >
-            <img class="button__image" src="./img/ico/repair.svg" />
-          </button>
-          <button class="menu-small__button button button_type_border">
-            <span class="menu-small__button-text button__text"
-              >Статус ремонта</span
-            >
-            <img class="button__image" src="./img/ico/checkstatus.svg" />
-          </button>
-        </nav>
+
+        <!-- Меню отображается на [width > 1100] -->
+        <div class="header__menu-small menu-small">
+          <div class="menu-small__button-define">
+            <span class="button__text">Оставить заявку</span>
+            <button
+              class="menu-small__button-repair button button_type_circle"
+            ></button>
+          </div>
+          <div class="menu-small__button-define">
+            <span class="button__text">Статус ремонта</span>
+            <button
+              class="menu-small__button-checkstatus button button_type_circle"
+            ></button>
+          </div>
+        </div>
       </header>
 
-      <nav class="main__h-scroll-menu h-scroll-menu">
+      <div class="main__h-scroll-menu h-scroll-menu">
         <div class="main__h-scroll-menu-fade-place fade-place">
           <div class="fade-place__fade"></div>
         </div>
         <button class="h-scroll-menu__button button button_type_border_active">
-          <span class="h-scroll-menu__button_text button__text"
-            >Ремонтируемые устройства</span
-          >
+          Ремонтируемые устройства
         </button>
         <button class="h-scroll-menu__button button button_type_border">
-          <span class="h-scroll-menu__button_text button__text"
-            >Дополнительные услуги</span
-          >
+          Дополнительные услуги
         </button>
         <button class="h-scroll-menu__button button button_type_border">
-          <span class="h-scroll-menu__button_text button__text"
-            >Цены на услуги</span
-          >
+          Цены на услуги
         </button>
         <button class="h-scroll-menu__button button button_type_border">
-          <span class="h-scroll-menu__button_text button__text"
-            >Адреса сервисных центров</span
-          >
+          Адреса сервисных центров
         </button>
         <button class="h-scroll-menu__button button button_type_border">
-          <span class="h-scroll-menu__button_text button__text"
-            >Специальные цены</span
-          >
+          Специальные цены
         </button>
         <button class="h-scroll-menu__button button button_type_border">
-          <span class="h-scroll-menu__button_text button__text">Отзывы</span>
+          Отзывы
         </button>
-      </nav>
+      </div>
 
       <div class="main__content content">
         <div class="content__text-block">
@@ -121,35 +107,10 @@
             </p>
           </article>
 
-          <button class="content__button button button button_type_arrow">
-            <span class="h-scroll-menu__button_text button__text"
-              >Читать далее</span
-            >
-            <img class="button__image" src="./img/ico/arrow.svg" />
-          </button>
+          <span class="content__arrow">Читать далее</span>
         </div>
-        <img class="main__banner" src="./img/banner.png" alt="CPS banner" />
+        <div class="main__banner"></div>
       </div>
-      <script>
-        let isDebug = false;
-        function appendCSSLink() {
-            const elem = document.createElement("link");
-            elem.rel = "stylesheet";
-            elem.type = "text/css";
-            elem.href = "./css/debug.css";
-            document.body.appendChild(elem);
-            return true;
-          }
-        function removeCSSLink() {
-            document.body.removeChild(document.body.querySelector("link"));
-            return false;
-          }
-        document.addEventListener("keydown", (e) => {             
-          if (e.code === "KeyB" && e.shiftKey) {
-            isDebug = isDebug ? removeCSSLink() : appendCSSLink()
-          }
-        });
-      </script>
     </main>
   </body>
 </html>
