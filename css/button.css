@@ -8,9 +8,8 @@
 
   cursor: pointer;
   border: none;
-}
-.button:hover {
-  box-shadow: inset 0px 0px 3px 2px #6d8497;
+  background-repeat: no-repeat;
+  background: #FFF;
 }
 .button_type_circle {
   width: 40px;
@@ -32,6 +31,31 @@
   border: 2px solid #b8ffec;
   border-radius: 6px;
 }
+
+.button_type_text{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 24px;
+  background: #FFF;
+  font-weight: 500;
+}
+.button_type_text:hover{
+  margin-left:-24px;
+  color: #7e7e82;
+  transition: 0.5s;
+}
+.button_type_text:hover::before{
+  content:"";
+  float:left;
+  width: 4px;
+  height: 24px;
+  margin-right:24px;
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+  background: #41F6D7;
+  
+}
 .button__text {
   color: #1b1c21;
   font-weight: 500;
@@ -40,13 +64,13 @@
 .upper-menu__button-burger {
   background-image: url("../img/ico/burger.svg");
 }
-.upper-menu__button-call {
+.upper-menu__button-call, .mobile-menu__button-call {
   background-image: url("../img/ico/call.svg");
 }
-.upper-menu__button-chat {
+.upper-menu__button-chat, .mobile-menu__button-chat {
   background-image: url("../img/ico/chat.svg");
 }
-.upper-menu__button-profile {
+.upper-menu__button-profile, .mobile-menu__button-profile {
   background-image: url("../img/ico/profile.svg");
 }
 .upper-menu__button-repair {
@@ -57,9 +81,13 @@
 }
 .menu-small__button-repair {
   background-image: url("../img/ico/repair.svg");
-  background-repeat: no-repeat;
 }
 .menu-small__button-checkstatus {
   background-image: url("../img/ico/checkstatus.svg");
-  background-repeat: no-repeat;
+}
+.mobile-menu__button-close{
+  background-image: url("../img/ico/close.svg");
+}
+.mobile-menu__button-search{
+  background-image: url("../img/ico/search.svg");
 }
