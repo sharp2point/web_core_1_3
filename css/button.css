@@ -16,6 +16,11 @@
   height: 40px;
   border-radius: 50%;
   background: #ff3e79;
+  transition: 0.25s;
+}
+.button_type_circle:hover{
+  transform: scale(0.9) rotate(5deg);
+  box-shadow: 0 0 10px 0 rgba(150,150,150,0.5), 0 0 15px 0px rgba(20,20,20,0.5);
 }
 .button_type_border {
   width: 40px;
@@ -41,20 +46,19 @@
   font-weight: 500;
 }
 .button_type_text:hover{
-  margin-left:-24px;
   color: #7e7e82;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 .button_type_text:hover::before{
+  position: absolute;
   content:"";
   float:left;
   width: 4px;
-  height: 24px;
-  margin-right:24px;
+  height: 32px;
+  left: 0px;
   border-bottom-right-radius: 2px;
   border-top-right-radius: 2px;
   background: #41F6D7;
-  
 }
 .button__text {
   color: #1b1c21;

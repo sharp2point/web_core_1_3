@@ -109,8 +109,95 @@
 
           <span class="content__arrow">Читать далее</span>
         </div>
-        <div class="main__banner"></div>
+        <img class="main__banner" src="./img/banner.jpg" alt="изображение с табличкой CPS">
+
       </div>
     </main>
+
+    <!-- MODAL MOBILE MENU -->
+    <div class="mobile-menu mobile-menu_close">
+      <div class="mobile-menu__header">
+        <button
+          class="mobile-menu__button-close button button_type_circle"
+        ></button>
+        <div class="mobile-menu__logo logo">
+          <img class="logo__image" src="./img/CPS_logo.svg" alt="logo CPS" />
+        </div>
+        <button
+          class="mobile-menu__button-search button button_type_circle"
+        ></button>
+      </div>
+      <div class="mobile-menu__navigation">
+        <button class="mobile-menu__navigation-button button button_type_text button_type_text_active">
+          Ремонт техники
+        </button>
+        <button class="mobile-menu__navigation-button button button_type_text">
+          Услуги и сервисы
+        </button>
+        <button class="mobile-menu__navigation-button button button_type_text">
+          Корпоративным клиентам
+        </button>
+        <button class="mobile-menu__navigation-button button button_type_text">
+          Продавцам техники
+        </button>
+        <button class="mobile-menu__navigation-button button button_type_text">
+          Партнерам
+        </button>
+        <button class="mobile-menu__navigation-button button button_type_text">
+          Производителям
+        </button>
+        <button class="mobile-menu__navigation-button button button_type_text">
+          Наши сервисные центры
+        </button>
+        <button class="mobile-menu__navigation-button button button_type_text">
+          Контакты
+        </button>
+      </div>
+      <div class="mobile-menu__footer">
+        <div class="mobile-menu__footer-menu">
+          <button
+            class="mobile-menu__button-call button button_type_circle"
+          ></button>
+          <button
+            class="mobile-menu__button-chat button button_type_circle"
+          ></button>
+          <button
+            class="mobile-menu__button-profile button button_type_circle"
+          ></button>
+        </div>
+        <a class="mobile-menu__mail" href="mailto:mail@cps.com">mail@cps.com</a>
+        <a class="mobile-menu__tel" href="tel:8 800 890 8900">8 800 890 8900</a>
+        <div class="mobile-menu__lang-switcher lang-switcher">
+          <input
+            id="sw-ru"
+              class="lang-switcher__radio"
+              type="radio"
+              name="lang-switch"
+              value="RU"
+            />
+            <label for="sw-ru" class="lang-switcher__label">RU</label>
+            <input
+            id="sw-en"
+              class="lang-switcher__radio"
+              type="radio"
+              name="lang-switch"
+              value="EN"
+            />
+            <label for="sw-en" class="lang-switcher__label">EN</label>
+            
+            <input
+            id="sw-ch"
+              class="lang-switcher__radio"
+              type="radio"
+              name="lang-switch"
+              value="CH"
+            />
+            <label for="sw-ch" class="lang-switcher__label">CH</label>
+            
+        </div>
+      </div>
+    </div>
+
+    <script src="./scripts/main.js"></script>
   </body>
 </html>

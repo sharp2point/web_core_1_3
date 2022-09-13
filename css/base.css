@@ -4,7 +4,6 @@
 @import url("mobile_menu.css");
 /* @import url("debug.css"); */
 
-/* @import url("debug.css"); */
 html{
   background: #1b1c21;
 }
@@ -12,7 +11,7 @@ html{
   margin-inline: auto;
   min-width: 320px;
   max-width: 1120px;
-  height: 100vh;
+  height: 1024px;
   background: #f8f8f8;
 }
 
@@ -108,15 +107,18 @@ html{
   background: #41f6d7;
 }
 .main__h-scroll-menu-fade-place {
-  display: flex;
+  position: relative;
+  display: none;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  position: absolute;
-  width: 100%;
+  
+  width: 100vh;
   height: 0px;
+  padding-right:10px;
 }
 .fade-place__fade {
+  display: none;
   width: 60px;
   height: 60px;
   background: linear-gradient(
@@ -174,9 +176,7 @@ html{
 .main__banner {
   width: 100%;
   height: 230px;
-  background: url("../img/banner.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
+  object-fit: contain;
 }
 
 /*------------- MEDIA QUERY ------------------*/
@@ -218,7 +218,7 @@ html{
   }
 }
 @media screen and (min-width: 1120px) {
-  .page__upper-menu {
+  .page__upper-menu, .main__h-scroll-menu-fade-place, .fade-place__fade{
     display: none;
   }
   .header__menu-small {
