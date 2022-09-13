@@ -3,6 +3,8 @@
 
 1.4. Задание по верстке модального меню 
 
+вёрстка меню выполнена в файле index.html стилизация mobile_menu.css
+
 [Результат выложен на Github Page](https://sharp2point.github.io/web_core_1_3/)
 
 
