@@ -29,7 +29,12 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  align-content: flex-start;
   flex-wrap: wrap;
+  overflow-y: hidden;
+  padding-top: 1rem;
+  padding-left: 2rem;
+  gap: 1rem 2rem;
 }
 .services__brand {
   display: flex;
@@ -41,8 +46,6 @@
   border: 1px solid #eaeaea;
   border-radius: 6px;
   background: #ffffff;
-  margin-left: 2rem;
-  margin-top: 1rem;
 }
 .services__brand-image {
   height: 40px;
@@ -74,9 +77,9 @@
   margin-left: 2rem;
   margin-bottom: 1rem;
 }
-.services__arrow::before {
+.services__arrow_open::before {
   transform: rotate(-135deg) translate(-5px, -0px) rotate(180deg);
 }
-.services__arrow::after {
+.services__arrow_open::after {
   transform: rotate(-135deg) translate(-5px, -0px) rotate(180deg);
 }
