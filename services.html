@@ -4,106 +4,28 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
     <title>Services 1.5</title>
-    <link rel="stylesheet" href="./css/base.css" />
+
+    
+    <!-- Подключение стилей для слайдера swiper -->
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/base.css"/>
   </head>
   <body>
     <div class="services">
       <header class="services__header">
         <h3 class="services__header-text">ремонт техники различных брендов</h3>
       </header>
-      <div class="services__brands">
-        <div class="services__brand">
-          <img
-            class="services__brand-image"
-            src="./img/brands/samsung.png"
-            alt="services brand image"
-          />
-          <button class="services__brand-button"></button>
-        </div>
-        <div class="services__brand">
-          <img
-            class="services__brand-image"
-            src="./img/brands/apple.png"
-            alt="services brand image"
-          />
-          <button class="services__brand-button"></button>
-        </div>
-        <div class="services__brand">
-          <img
-            class="services__brand-image"
-            src="./img/brands/bosh.png"
-            alt="services brand image"
-          />
-          <button class="services__brand-button"></button>
-        </div>
-        <div class="services__brand">
-          <img
-            class="services__brand-image"
-            src="./img/brands/hp.png"
-            alt="services brand image"
-          />
-          <button class="services__brand-button"></button>
-        </div>
-        <div class="services__brand">
-          <img
-            class="services__brand-image"
-            src="./img/brands/lenovo.png"
-            alt="services brand image"
-          />
-          <button class="services__brand-button"></button>
-        </div>
-        <div class="services__brand">
-          <img
-            class="services__brand-image"
-            src="./img/brands/sony.png"
-            alt="services brand image"
-          />
-          <button class="services__brand-button"></button>
-        </div>
-        <div class="services__brand">
-          <img
-            class="services__brand-image"
-            src="./img/brands/viewsonic.png"
-            alt="services brand image"
-          />
-          <button class="services__brand-button"></button>
-        </div>
-        <div class="services__brand">
-          <img
-            class="services__brand-image"
-            src="./img/brands/apple.png"
-            alt="services brand image"
-          />
-          <button class="services__brand-button"></button>
-        </div>
-        <div class="services__brand">
-          <img
-            class="services__brand-image"
-            src="./img/brands/sony.png"
-            alt="services brand image"
-          />
-          <button class="services__brand-button"></button>
-        </div>
-        <div class="services__brand">
-          <img
-            class="services__brand-image"
-            src="./img/brands/samsung.png"
-            alt="services brand image"
-          />
-          <button class="services__brand-button"></button>
-        </div>
-        <div class="services__brand">
-          <img
-            class="services__brand-image"
-            src="./img/brands/lenovo.png"
-            alt="services brand image"
-          />
-          <button class="services__brand-button"></button>
-        </div>
-      </div>
-      <span class="content__arrow services__arrow">Скрыть</span>
+      <div class="services__brands"></div>
+
+      <span class="content__arrow services__arrow services__arrow_open"
+        >Скрыть</span
+      >
     </div>
-    <script src="./scripts/services.js"></script>
+    
+    <script src="./scripts/services.js" type="module"></script>
   </body>
 </html>
