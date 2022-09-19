@@ -1,4 +1,5 @@
 .services {
+  --brand-height: calc(72px + 1rem);
   --pad-left: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -6,7 +7,7 @@
   align-items: flex-start;
   gap: 1rem;
   background: white;
-  height: 350px;
+  height: 800px;
 }
 .services__header {
   display: flex;
@@ -15,7 +16,7 @@
   width: 100%;
   height: 56px;
   padding-left: var(--pad-left);
-  background: linear-gradient(90deg, #f8f8f8, #ffffff);
+  background: linear-gradient(to right, #f8f8f8, #ffffff);
 }
 .services__header-text {
   text-transform: uppercase;
@@ -26,21 +27,48 @@
   letter-spacing: -0.2px;
   color: #7e7e82;
 }
-.content__arrow {
-  display: none;
-}
 .services__brands {
-  /* swiper */
+  /* mobile swiper */
   display: flex;
   width: 100%;
-  height: 150px;
+  height: 130px;
   flex-direction: row;
   gap: 1rem;
+}
+
+.services__brands-large {
+  /* large screen */
+  display: flex;
+  width: 100%;
+  height: 170px;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  transition-duration: 1s;
+}
+/* .services__brands-large_open {
+  height: 380px;
+} */
+.brands__wrapper-large {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  overflow: hidden;
+  margin-left: var(--pad-left);
 }
 .brands__item {
   /* swiper-slide */
   display: flex;
+  height: 74px;
   justify-content: center;
+  /* border: 1px solid red; */
 }
 .brand {
   display: flex;
@@ -53,10 +81,9 @@
   height: 72px;
   width: 240px;
   border-radius: 5px;
-  flex-basis: 240px;
 }
 .brand__image {
-  height: 70px;
+  height: 40px;
   width: 100px;
   object-fit: contain;
 }
@@ -67,14 +94,21 @@
   border-radius: 50%;
   background: #ffffff;
 }
-.barand__button::after {
+.brand__button::after {
   position: relative;
   display: block;
   content: "";
-  width: 7px;
-  height: 7px;
+  width: 0.4rem;
+  height: 0.4rem;
   border-top: 2px solid #ff3e79;
   border-right: 2px solid #ff3e79;
+  transform: translateX(0.9rem) rotate(45deg);
+}
+.brands__paginator {
+  display: none;
+}
+.swiper-pagination {
+  margin-bottom: 1rem;
 }
 .swiper-pagination-bullet {
   width: 12px;
@@ -87,64 +121,34 @@
   background-color: #b5b6bc;
 }
 
-/*
-.services {
-  --pad-left: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  background: #f8f8f8;  
-  min-height: 234px;
-  width: 100%;
+/*---------- MEDIA QUERY -----------------*/
+@media (min-width: 500px) and (max-width: 749px) {
+  .brands__wrapper-large {
+    gap: 1rem 1.5rem;
+  }
+  .services__brands-large_open {
+    height: calc(var(--brand-height) * 5);
+  }
+  .brand {
+    width: 224px;
+  }
 }
-.services__header {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  height: 56px;
-  padding-left: var(--pad-left);
-  background: linear-gradient(90deg, #f8f8f8, #ffffff);
+@media (min-width: 750px) and (max-width: 900px) {  
+  .services__brands-large_open {
+    height: calc(var(--brand-height) * 4);
+  }
+  .brand {
+    width: 224px;
+  }
 }
-.services__header-text {
-  text-transform: uppercase;
-  font-family: "TT Lakes";
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.5rem;
-  letter-spacing: -0.2px;
-  color: #7e7e82;
+@media (min-width: 901px) {
+  .brands__wrapper-large {
+    gap: 1rem 2rem;
+  }
+  .services__brands-large_open {
+    height: calc(var(--brand-height) * 3);
+  }
+  .brand {
+    width: 240px;
+  }
 }
-.services__brands {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-content: flex-start;
-  width: 100%;
-  
-  padding-top: 1rem;
-  padding-left: var(--pad-left);
-  gap: 1rem var(--pad-left);
-}
-.services__arrow {
-  margin-top: 3rem;
-  margin-bottom: 1rem;
-  margin-left: var(--pad-left);
-}
-.services__arrow_open::before {
-  transform: rotate(-135deg) translate(-5px, -0px) rotate(180deg);
-}
-.services__arrow_open::after {
-  transform: rotate(-135deg) translate(-5px, -0px) rotate(180deg);
-}
-.swiper {
-  width: 100%;
-  height:120px;
-}
-.swiper-slide {
-  flex-basis: 240px;
-  height: 74px; 
-  margin-left:1rem;
-}
-*/

@@ -1,42 +1,71 @@
 import Swiper from "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js";
 
-function initSwiper() {
-  let is_swiper = true;
-  return () => {
-    if (is_swiper) {
-      is_swiper = false;
-      return new Swiper(".swiper", {
-        direction: "horizontal",
+class WorkerSwiper {
+  constructor(swiper_host, wrapper, slider_list, paginator) {
+    this.swiper_host = swiper_host;
+    this.wrapper = wrapper;
+    this.slider_list = slider_list;
+    this.paginator = paginator;  
+    this.swiper = null;  
+  }
+  init = ()=>{
+    this.swiper = new Swiper(".swiper", {
+      direction: "horizontal",
 
-        pagination: {
-          el: ".swiper-pagination",
-        },
-      });
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+    return this.swiper;
+  }
+
+  mutatorElementClass = (el, list_add, list_remove) => {
+    el.classList.remove(...list_remove);
+    el.classList.add(...list_add);
+  };
+
+  addSwiperClass = () => {
+    this.mutatorElementClass(
+      this.swiper_host,
+      ["services__brands", "swiper"],
+      ["services__brands-large"]
+    );
+    this.mutatorElementClass(
+      this.wrapper,
+      ["swiper-wrapper"],
+      ["brands__wrapper-large"]
+    );
+    this.mutatorElementClass(this.paginator, ["swiper-pagination"], ["brands__paginator"]);
+    this.slider_list.forEach((slide) =>
+      this.mutatorElementClass(slide, ["swiper-slide"], [])
+    );
+  };
+
+  removeSwiperClass = () => {
+    this.mutatorElementClass(
+      this.swiper_host,
+      ["services__brands-large"],
+      ["services__brands", "swiper"]
+    );
+    this.mutatorElementClass(
+      this.wrapper,
+      ["brands__wrapper-large"],
+      ["swiper-wrapper"]
+    );
+    this.mutatorElementClass(this.paginator, ["brands__paginator"], ["swiper-pagination"]);
+    this.slider_list.forEach((slide) =>
+      this.mutatorElementClass(slide, [], ["swiper-slide"])
+    );
+  };
+
+  switchSwiper = (is_switch) => {
+    if (is_switch) {
+      // если мобильный вариант включаем Swiper
+      this.addSwiperClass();
     } else {
-      console.log("initSwiper: достаточно одной копии!");
+      // если размер экрана больше мобильного удаляем Swiper
+      this.removeSwiperClass();
     }
   };
 }
-
-function switchSwiper(
-  swiperEl,
-  swiper_wrappEl,
-  swiper_slides,
-  swiper_paginator,
-  is_switch
-) {
-  if (is_switch) {
-    swiperEl.classList.add("swiper");
-    swiper_wrappEl.classList.add("swiper-wrapper");
-    swiper_slides.forEach((slide) => slide.classList.add("swiper-slide"));
-    swiper_paginator.classList.add("swiper-pagination");
-  } else {
-
-    swiperEl.classList.remove("swiper");
-    swiper_wrappEl.classList.remove("swiper");
-    swiper_slides.forEach((slide) => slide.classList.remove("swiper"));
-    swiper_paginator.classList.remove("swiper");
-  }
-}
-
-export { initSwiper, switchSwiper };
+export default WorkerSwiper;
