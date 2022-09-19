@@ -47,9 +47,11 @@
   gap: 1rem;
   transition-duration: 1s;
 }
-/* .services__brands-large_open {
-  height: 380px;
-} */
+
+.services__button{
+  margin-left: 1.5rem;
+}
+
 .brands__wrapper-large {
   display: flex;
   width: 100%;

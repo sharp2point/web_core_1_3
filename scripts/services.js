@@ -1,7 +1,7 @@
 import WorkerSwiper from "./swiper_init.js";
 
 let system_state = null; // флаг мобильное/полное состояние
-let arrow_button = document.querySelector(".content__arrow"); // кнопка со стрелкой
+let arrow_button = document.querySelector(".button__arrow"); // кнопка со стрелкой
 let swiper_host = document.querySelector(".services__brands");
 let swiper_wrapp = document.querySelector(".wrapper");
 let swiper_slides = document.querySelectorAll(".brands__item");
@@ -21,19 +21,31 @@ function mobileScreen() {
   return screen.width <= MOBILE_WIDTH ? true : false;
 }
 
+function setStateArrowButton(is_mobile) {
+  if (is_mobile) {
+    swiper_host.classList.remove("services__brands-large_open");
+    arrow_button.style.display = "none";
+  } else {
+    arrow_button.style.display = "block";
+    if (arrow_button.classList.contains("button__arrow_open")) {
+      swiper_host.classList.add("services__brands-large_open");
+    }
+  }
+}
+
 function sizeReaction() {
   let is_mobile = mobileScreen();
 
   if (is_mobile !== system_state) {
     if (is_mobile) {
-      swiper_host.classList.remove("services__brands-large_open");
-      arrow_button.classList.add("content__arrow_hide");
+      setStateArrowButton(is_mobile);
+      
       wsw.switchSwiper(is_mobile);
       swiper = wsw.init();
       system_state = is_mobile;
-      
     } else {
-      arrow_button.classList.remove("content__arrow_hide");
+      setStateArrowButton(is_mobile);
+
       if (swiper !== null) {
         swiper.destroy(true, true);
       }
@@ -50,11 +62,11 @@ window.addEventListener("resize", sizeReaction);
 
 function toggleArrowButtonReaction(is_open) {
   if (is_open) {
-    arrow_button.classList.add("content__arrow_open");
+    arrow_button.classList.add("button__arrow_open");
     swiper_host.classList.add("services__brands-large_open");
     arrow_button.innerText = "Скрыть";
   } else {
-    arrow_button.classList.remove("content__arrow_open");
+    arrow_button.classList.remove("button__arrow_open");
     swiper_host.classList.remove("services__brands-large_open");
     arrow_button.innerText = "Показать всё";
   }
