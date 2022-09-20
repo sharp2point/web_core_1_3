@@ -11,9 +11,13 @@ class WorkerSwiper {
   init = ()=>{
     this.swiper = new Swiper(".swiper", {
       direction: "horizontal",
-
+      slideToClickedSlide: true,
+      slidesPerView: 1,
+      spaceBetween: 0,
+      width:265,
       pagination: {
         el: ".swiper-pagination",
+        clickable: true,
       },
     });
     return this.swiper;
