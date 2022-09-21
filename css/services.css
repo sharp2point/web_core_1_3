@@ -8,6 +8,7 @@
   gap: 1rem;
   background: white;
   height: 800px;
+  max-width: 1120px;
 }
 .services__header {
   display: flex;
