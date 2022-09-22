@@ -13,7 +13,7 @@ function open_modal(is_open) {
 }
 
 // открывает модальное окно по клику на кнопке burger-button
-burger_button.addEventListener("click", (e) => open_modal(true));
+burger_button.addEventListener("click", () => open_modal(true));
 
 // закрывает модальное окно по клику на пустом пространстве модального окна
 modal_host.addEventListener("click", (e) => {
@@ -23,4 +23,4 @@ modal_host.addEventListener("click", (e) => {
 });
 
 // закрывает модальное окно по клику на кнопке close-button
-mobile_menu_close_button.addEventListener("click", (e) => open_modal(false));
+mobile_menu_close_button.addEventListener("click", () => open_modal(false));
