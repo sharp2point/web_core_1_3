@@ -13,7 +13,7 @@ class WorkerSwiper {
       direction: "horizontal",
       slideToClickedSlide: true,
       slidesPerView: 1,
-      spaceBetween: 0,
+      spaceBetween: 16,
       width:265,
       pagination: {
         el: ".swiper-pagination",
