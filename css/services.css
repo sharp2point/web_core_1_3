@@ -43,7 +43,6 @@
   align-items: flex-start;
   gap: 1rem;
   transition-duration: 1s;
-  /* border: 1px solid green; */
 }
 .services__brands-large_close {
   height: calc(72px * 2 + 1.2rem);
@@ -136,6 +135,6 @@
     --pad-left: 2rem;
   }
   .brands__item {
-    flex: 0 0 22%;
+    flex: 0 0 22%;    
   }
 }
